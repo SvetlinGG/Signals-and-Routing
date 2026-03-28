@@ -1,0 +1,26 @@
+import { Component, OnInit, signal } from '@angular/core';
+
+@Component({
+  selector: 'app-wrapper',
+  standalone: true,
+  imports: [],
+  templateUrl: './wrapper.component.html',
+  styleUrl: './wrapper.component.css'
+})
+export class WrapperComponent implements OnInit {
+
+  counter = signal(0);
+
+  ngOnInit(): void {
+    console.log(`counter: ${this.counter()}`);
+    
+  }
+
+  increment(){
+
+    const value = this.counter() + 1;
+    this.counter.set(value);
+    
+  }
+
+}
