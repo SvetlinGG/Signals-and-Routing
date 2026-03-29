@@ -3,12 +3,22 @@
     color: white;
     display: flex;
     align-items: center;
-    justify-content: end;
-    padding: 10px;
+    justify-content: center;
+    padding: 5px;
     width: 100%;
     height: 50px;
 }
 .nav-btn{
     border: 1px solid white;
+    border-radius: 5px;
     margin-left: 10px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.nav-btn:hover {
+    border: 1px solid lightgreen;
+    color: red;
 }
