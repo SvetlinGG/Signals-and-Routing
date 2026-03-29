@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../user-service.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { User } from '../../types/users';
 
 @Component({
   selector: 'app-user-details',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './user-details.component.html',
   styleUrl: './user-details.component.css'
 })
@@ -24,8 +24,9 @@ export class UserDetailsComponent implements OnInit {
 
     this.userService.getSingleUser(userId).subscribe(user => {
       this.user = user;
-      
     })
+
+  
   }
 
 }
