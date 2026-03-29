@@ -1,27 +1,27 @@
 import { Component, computed, OnInit, signal } from '@angular/core';
 
-@Component({
-  selector: 'app-wrapper',
-  standalone: true,
-  imports: [],
-  templateUrl: './wrapper.component.html',
-  styleUrl: './wrapper.component.css'
-})
-export class WrapperComponent implements OnInit {
+// @Component({
+//   selector: 'app-wrapper',
+//   standalone: true,
+//   imports: [],
+//   templateUrl: './wrapper.component.html',
+//   styleUrl: './wrapper.component.css'
+// })
+//export class WrapperComponent implements OnInit {
 
-  counter = signal(0);
-  doubleCounter = computed(() => this.counter() * 2);
+  // counter = signal(0);
+  // doubleCounter = computed(() => this.counter() * 2);
 
-  ngOnInit(): void {
-    console.log(`counter: ${this.counter()}`);
+  // ngOnInit(): void {
+  //   console.log(`counter: ${this.counter()}`);
     
-  }
+  // }
 
-  increment(){
+  // increment(){
 
-    const value = this.counter() + 1;
-    this.counter.set(value);
+  //   const value = this.counter() + 1;
+  //   this.counter.set(value);
     
-  }
+  // }
 
-}
+//}
