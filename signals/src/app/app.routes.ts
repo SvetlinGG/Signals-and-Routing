@@ -1,8 +1,13 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
+import { UserDetailsComponent } from './users/user-details/user-details.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 export const routes: Routes = [
-    {path: "", component: HomeComponent},
+    {path: "", redirectTo: "/home", pathMatch: "full"},
+    {path: "home", component: HomeComponent},
     {path: "users", component: UsersComponent},
+    {path: "users/details/:id", component: UserDetailsComponent},
+    {path: "**", component: ErrorPageComponent}
 ];

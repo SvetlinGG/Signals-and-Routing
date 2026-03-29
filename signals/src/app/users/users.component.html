@@ -1,6 +1,6 @@
 <h3>Users List:</h3>
 <div>
     @for (user of users; track $index) {
-        <li [routerLink]="['./user',',detail', user.id]">id: {{user.id}}, name: {{user.name}}</li>
+        <li [routerLink]="['./user',',detail', user.id]">id: {{user.id}}, name: {{user.name}} -> {{user.company.name}}</li>
     }
 </div>
