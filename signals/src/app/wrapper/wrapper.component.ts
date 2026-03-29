@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, computed, OnInit, signal } from '@angular/core';
 
 @Component({
   selector: 'app-wrapper',
@@ -10,6 +10,7 @@ import { Component, OnInit, signal } from '@angular/core';
 export class WrapperComponent implements OnInit {
 
   counter = signal(0);
+  doubleCounter = computed(() => this.counter() * 2);
 
   ngOnInit(): void {
     console.log(`counter: ${this.counter()}`);
